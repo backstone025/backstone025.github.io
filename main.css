@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+}
+
+.items {
+    padding: 20px;
+}
+
+.profile_img {
+    float: left;
+    height: 200px;
+    width: 200px;
+}
