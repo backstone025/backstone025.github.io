@@ -1,0 +1,92 @@
+<!--
+name : Gyeongseok Bae
+student ID : 202201590
+date : April 4, 2026
+This is a subpage, describe for "barrier-free-auth-application" project.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+    <title>barrier-free-auth-application page</title>
+</head>
+
+<body class="container">
+    <div class="retro-block">
+        <a class="retro-button" href="./about.html">BACK</a>
+        <a class="retro-button" href="#">NEXT</a>
+        <a class="retro-button" href="#">PREV</a>
+    </div>
+    <div class="retro-block">
+        <h1>
+            1. Project Vision & Background
+        </h1>
+        <h2>
+            1.1. The Barriers Created by Technology
+        </h2>
+        <div class="horizon">
+            <p>
+                While technology has advanced rapidly, the digital divide between those who benefit from it and those
+                who do
+                not has only deepened.
+                <br>I realized that technology, which is meant to enrich our lives, can paradoxically become a barrier
+                for
+                some.
+                <br>My commitment to lowering these barriers stems from the following experiences:
+            </p>
+            <img class="retro-block" src="./img/barrier.jpeg" height="200px" width="300px">
+        </div>
+
+        > A Senior at a Welfare Facility
+        <p>
+
+            I witnessed a senior citizen struggling with a long-distance bus reservation, stuck in a frustrating
+            loop with a customer service representative. The issue was simply a delayed information update, but for
+            someone unfamiliar with the concept of an 'update,' it was an insurmountable wall.
+        </p>
+
+        > A Personal Experience
+        <p>
+            Last October, I found myself trapped in an endless loop of receipt authentication while trying to log
+            into my email.
+            <br>Even though I followed the instructions, the screen kept repeating.
+            <br>It was a tiring experience that stayed with me;
+            <br>it proved that technological barriers can affect anyone, regardless of age or expertise.
+            <br>As technology evolves, its misuse inevitably leads to more complex security procedures.
+            <br>However, these complex layers create a dilemma by alienating certain groups.
+            <br>I aim to solve this problem by decoupling account functions into hierarchical layers.
+        </p>
+        <h2>
+            1.2. Functional Decentralization of Accounts
+        </h2>
+        <p>
+            The solution proposed in this project is to separate the 'Master Account' from the 'Temporary Account' used
+            for
+            daily interactions.
+        </p>
+        > Master Account: Maintains high-strength, complex authentication.
+        <p>
+            It is responsible for creating TemporaryAccounts and controlling their permissions.
+            <br>Since it is only used for renewing expired accounts or revoking access in case of a hack, it is accessed
+            infrequently.
+        </p>
+        > Temporary Account: Operates with a limited lifespan and restricted permissions, allowing users to access
+        services via simple, convenient authentication.
+        <p>
+            By centralizing complex procedures (such as 2FA or CAPTCHA) only during the Temporary Account renewal phase,
+            this system aims to strike a perfect balance between robust security and user convenience.
+        </p>
+        <a class="retro-button" href="https://github.com/backstone025/Barrier-Free-Auth">github</a>
+        <a class="retro-button" href="https://velog.io/@backstone/series/barrier-free-auth-application">blog</a>
+    </div>
+    <footer>
+        <p>contents :
+            https://velog.io/@backstone/barrier-free-auth-application-01-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%83%81-ver-0.5
+        </p>
+        <p>barrier.jpeg : https://kr.pinterest.com/pin/68891069281138357/</p>
+    </footer>
+</body>
+
+</html>
