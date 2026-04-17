@@ -1,0 +1,93 @@
+<!--
+* name : Bae gyeonseok
+* date : 2026-4-17
+* Section: IAB 6068
+*
+* 슬롯 머신의 구조 구현을 위해 필요한 html파일입니다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./slot-game-style.css" rel="stylesheet">
+    <title>JS 슬롯머신</title>
+</head>
+
+<body class="container">
+    <div class="slot-machine">
+        <h1 class="result-box" id="result-text">행운을 빕니다!</h1>
+        <div class="result-box" id="scoreBox"><span>total score :&nbsp;</span><span id="total-score">0</span></div>
+        <div class="score-board">
+            <div class="score-board-contents">
+                <div class="score-row">item's score</div>
+                <div class="score-row"><span>🍒 X 3 =&nbsp;</span><span id="item1-score">1</span></div>
+                <div class="score-row"><span>🍋 X 3 =&nbsp;</span><span id="item2-score">2</span></div>
+                <div class="score-row"><span>🍀 X 3 =&nbsp;</span><span id="item3-score">5</span></div>
+                <div class="score-row"><span>💎 X 3 =&nbsp;</span><span id="item4-score">10</span></div>
+                <div class="score-row"><span>💀 X 3 =&nbsp;</span><span id="item5-score">-10</span></div>
+            </div>
+            <div class="score-board-contents">
+                <div class="score-row">item's probability</div>
+                <div class="score-row"><span>🍒&nbsp;</span><span id="item1-num">5</span></div>
+                <div class="score-row"><span>🍋&nbsp;</span><span id="item2-num">5</span></div>
+                <div class="score-row"><span>🍀&nbsp;</span><span id="item3-num">2</span></div>
+                <div class="score-row"><span>💎&nbsp;</span><span id="item4-num">1</span></div>
+                <div class="score-row"><span>💀&nbsp;</span><span id="item5-num">2</span></div>
+            </div>
+            <div class="score-board-contents">
+                <div class="score-row">store / [refresh cost :&nbsp<span id="store-cost">5</span>&nbsp]</div>
+                <button id="refresh-btn">refresh</button>
+                <br>
+                <div class="score-row"><button id="sct-btn">0</button><span id="sct-item">🍒</span>&nbsp<span
+                        id="sct-op">+</span>&nbsp<span id="sct-value">0</span>만큼
+                    가치를
+                    올립니다.</div>
+                <br>
+                <div class="score-row"><button id="pbt-btn">0</button><span id="pbt-item">🍒</span>&nbsp<span
+                        id="pbt-op">+</span>&nbsp<span id="pbt-value">0</span>만큼
+                    확률을
+                    높입니다.</div>
+            </div>
+        </div>
+        <div class="reels">
+            <div class="reel">
+                <div class="reel-inner" id="reel11"></div>
+            </div>
+            <div class="reel">
+                <div class="reel-inner" id="reel12"></div>
+            </div>
+            <div class="reel">
+                <div class="reel-inner" id="reel13"></div>
+            </div>
+        </div>
+        <div class="reels">
+            <div class="reel">
+                <div class="reel-inner" id="reel21"></div>
+            </div>
+            <div class="reel">
+                <div class="reel-inner" id="reel22"></div>
+            </div>
+            <div class="reel">
+                <div class="reel-inner" id="reel23"></div>
+            </div>
+        </div>
+        <div class="reels">
+            <div class="reel">
+                <div class="reel-inner" id="reel31"></div>
+            </div>
+            <div class="reel">
+                <div class="reel-inner" id="reel32"></div>
+            </div>
+            <div class="reel">
+                <div class="reel-inner" id="reel33"></div>
+            </div>
+        </div>
+        <button id="spin-btn">SPIN!</button>
+    </div>
+    <script src="./slot-game.js"></script>
+</body>
+
+</html>
