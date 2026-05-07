@@ -1,0 +1,56 @@
+<!--
+* name : Bae gyeonseok
+* date : 2026-5-6
+* Section: IAB 6068
+*
+* url 검색 창과 그 결과를 보여주기 위해 필요한 html파일입니다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../style.css" rel="stylesheet">
+    <link href="./network-path.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>network path</title>
+</head>
+
+<body class="container">
+    <header class="retro-block" style="margin-bottom: 20px;">
+        <h1>Network Path Tracker</h1>
+        <p>사용자의 위치와 대상 서버 사이의 경로를 시각화합니다.</p>
+    </header>
+
+    <main class="retro-block">
+        <section id="search-control" class="horizon retro-input-group">
+            <input type="text" id="url-input" class="search-block" placeholder="put searched url">
+            <button id="search-btn" class="retro-button">SEARCH</button>
+        </section>
+
+        <section id="result-container" class="hidden">
+            <div id="map-area" class="retro-block">
+                <div id="map" class="map-block"></div>
+            </div>
+
+            <div id="info-area">
+                <h3>분석 결과</h3>
+                <ul id="path-info-list"></ul>
+            </div>
+        </section>
+
+        <section id="error-view" class="hidden">
+            <p id="error-message" class="error-message"></p>
+        </section>
+    </main>
+
+    <footer class="copy-from-text">
+        <p>Data provided by <a href="https://ipapi.co/">ipapi.co</a></p>
+    </footer>
+
+    <script src="network-path.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+
+</html>

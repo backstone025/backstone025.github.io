@@ -1,0 +1,32 @@
+/**
+* name : Bae gyeonseok
+* date : 2026-5-6
+* Section: IAB 6068
+*
+* url 검색 창과 그 결과를 보여주기 위해 필요한 css파일입니다.
+*/
+.search-block {
+    background-color: #000;
+    color: #33ff00;
+    padding: 10px 20px;
+    border: 4px solid #33ff00;
+    flex-grow: 1;
+}
+
+.map-block {
+    height: 400px;
+    background-color: #111;
+}
+
+.error-message {
+    color: #ff0000;
+    font-family: 'VT323';
+    font-size: 20px;
+}
+
+.copy-from-text {
+    color: #005500;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'VT323';
+}
