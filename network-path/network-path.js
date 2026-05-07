@@ -8,8 +8,7 @@
 "use strict";
 
 (function () {
-    // 1. URL 통일 (제한이 덜한 API 사용) 
-    const IP_API_URL = "http://ip-api.com/json/";
+    const IP_API_URL = "https://ipwhois.app/json/";
     let map = null; // 지도 변수는 모듈 범위 내에서 유지 [cite: 165]
 
     window.addEventListener("load", init);
@@ -57,23 +56,23 @@
         const li = document.createElement("li"); // [cite: 122]
 
         // ip-api.com 필드명에 맞게 수정 (query, city, country, isp 등)
-        li.textContent = `[TRACKED] ${data.query} -> ${data.city}, ${data.country} (${data.isp})`;
+        li.textContent = `[TRACKED] ${data.ip} -> ${data.city}, ${data.country} (${data.isp})`;
         infoList.appendChild(li); // [cite: 122]
 
-        updateMap(data.lat, data.lon, data.city);
+        updateMap(data.latitude, data.longitude, data.city);
     }
 
     /**
      * 지도를 업데이트하는 비사소한 DOM 조작 함수 [cite: 122, 192]
      */
-    function updateMap(lat, lon, city) {
+    function updateMap(latitude, longitude, city) {
         if (!map) {
-            map = L.map('map').setView([lat, lon], 10);
+            map = L.map('map').setView([latitude, longitude], 10);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
         } else {
-            map.setView([lat, lon], 10);
+            map.setView([latitude, longitude], 10);
         }
-        L.marker([lat, lon]).addTo(map)
+        L.marker([latitude, longitude]).addTo(map)
             .bindPopup(`<b>${city}</b><br>Server Location`).openPopup();
     }
 
